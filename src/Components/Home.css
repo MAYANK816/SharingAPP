@@ -1,0 +1,36 @@
+h2{
+    padding: 25px;
+}
+#room_gen,#room_id_holder{
+    padding: 15px;
+    background: tomato;
+    color: white;
+    margin-left: 25px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+#room_id_holder{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#file_holder{
+    padding: 15px;
+    width: 100vw;
+    height: 300px;
+    border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+#file_logo{
+    width:100px ;
+    height: 100px;
+    background:url("/public//images/file.svg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
