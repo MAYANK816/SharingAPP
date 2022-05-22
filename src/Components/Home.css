@@ -1,36 +1,120 @@
 h2{
     padding: 25px;
 }
-#room_gen,#room_id_holder{
-    padding: 15px;
-    background: tomato;
-    color: white;
-    margin-left: 25px;
-    outline: none;
-    border: none;
-    text-decoration: none;
+
+body {
+	background: #f5f5f5;
+	font-family: "Roboto",sans-serif;
 }
-#room_id_holder{
-    text-align: center;
-    font-size: 15px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+.app {
+	width: 100vw;
+	height: auto;
+	background: #fff;
 }
-#file_holder{
-    padding: 15px;
-    width: 100vw;
-    height: 300px;
-    border-radius: 12px;
-display: flex;
-align-items: center;
-justify-content: center;
-    background-repeat: no-repeat;
-    margin: 20px;
+
+
+.join-screen .form .form-input {
+	margin: 10px 10px;
 }
-#file_logo{
-    width:100px ;
-    height: 100px;
-    background:url("/public//images/file.svg");
-    background-repeat: no-repeat;
-    background-size:  cover;
+.join-screen .form h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+	line-height:45px;
+	font-family: "Montserrat",sans-serif;
+}
+.join-screen .form button {
+	background: #111;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 20px;
+}
+.join-screen .form #join-id b {
+	color: #222;
+	display: block;
+	margin-top: 20px;
+}
+#join-id {
+	display: inline-block;
+	font-size: 25px;
+	font-family: monospace;
+	color: #111;
+	padding: 10px;
+	border: 1px solid #111;
+	margin-top: 5px;
+}
+.join-screen .form .form-input label {
+	color: #222;
+	font-size: 18px;
+}
+.join-screen .form .form-input input {
+	display: block;
+	margin:10px 0px;
+	width: 100%;
+	max-width: 200px;
+	border: 1px solid #111;
+	color: #111;
+	font-size: 20px;
+	padding: 10px;
+}
+ #roomId{
+	 margin-left: 15px;
+ }
+.fs-screen {
+	padding: 20px;
+}
+.fs-screen .file-input {
+	width: 100%;
+	border: 2px dashed #555;
+}
+.fs-screen .file-input label {
+	display: block;
+	width: 100%;
+	padding: 40px 50px;
+	text-align: center;
+	color: #111;
+	font-size: 18px;
+}
+.fs-screen .file-input input {
+	display: none;
+}
+.fs-screen .files-list {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.fs-screen .files-list .title {
+	width: 100%;
+	margin: 20px 0px;
+}
+.fs-screen .files-list .item {
+	width: 33%;
+	min-width: 200px;
+	border: 1px solid #eee;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
+}
+.fs-screen .files-list .item .progress {
+	padding: 30px;
+	text-align: center;
+	font-size: 50px;
+	color: #222;
+	font-family: "Montserrat";
+}
+.fs-screen .files-list .item .filename {
+	padding: 5px;
+	font-size: 18px;
+	border-top: 1px solid #eee;
+}
+
+@media screen and (max-wdith:780px) {
+	body{
+		width: 100vw;
+	}
 }
