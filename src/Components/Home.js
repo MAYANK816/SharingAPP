@@ -8,7 +8,6 @@ const Home = () => {
     const generateRoomId = () => {
         let Id = Math.trunc(Math.random() * 999) + "-" + Math.trunc(Math.random() * 999) + "-" + Math.trunc(Math.random() * 999);
         setroomId(Id);
-
     }
 
     socket.on("init", function (uid) {
@@ -74,11 +73,11 @@ const Home = () => {
     }
     return (
         <>
-            <div class="app">
-                <div class="screen join-screen active">
-                    <div class="form">
+            <div className="app">
+                <div className="screen join-screen active">
+                    <div className="form">
                         <h2>Share your files securely</h2>
-                        <div class="form-input">
+                        <div className="form-input">
                             <button id="sender-start-con-btn" onClick={createRoom}>Create share room</button>
                         </div>
                         {showId && <div id="roomId"><b>Room ID</b> <span id="join-id">{roomId}</span> </div>}
@@ -87,15 +86,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {showId && <div class="screen fs-screen">
-                <div class="file-input">
+            {showId && <div className="screen fs-screen">
+                <div className="file-input">
                     <label for="file-input">
                         Click here to Select files for sharing
                     </label>
                     <input type="file" id="file-input" onChange={setFile} />
                 </div>
-                <div class="files-list">
-                    <div class="title">Shared files</div>
+                <div className="files-list">
+                    <div className="title">Shared files</div>
 
                 </div>
             </div>}

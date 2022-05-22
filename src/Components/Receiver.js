@@ -63,23 +63,23 @@ const Receiver = () => {
 
 
     return (
-        <div class="app">
-            <div class="screen join-screen active">
-                <div class="form">
+        <div className="app">
+            <div className="screen join-screen active">
+                <div className="form">
                     <h2>Share your files securely</h2>
-                    <div class="form-input">
+                    <div className="form-input">
                         <label>Join ID</label>
                         <input type="text" id="join-id" onChange={(e) =>
                             setsenderId(e.target.value)} />
                     </div>
-                    <div class="form-input">
+                    <div className="form-input">
                         <button id="receiver-start-con-btn" onClick={onConnection}>Connect</button>
                     </div>
                 </div>
             </div>
-            <div class="screen fs-screen">
-                <div class="files-list">
-                    <div class="title">Shared files</div>
+            <div className="screen fs-screen">
+                <div className="files-list">
+                    <div className="title">Shared files</div>
 
                 </div>
             </div>
