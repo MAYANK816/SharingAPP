@@ -3,7 +3,8 @@ import socket from "./Helper";
 import download from "downloadjs";
 const Receiver = () => {
   const [sender_uid, setsenderId] = useState("");
-  const [showId, setshowId] = useState(false);
+  const [show, setshow] = useState(false);
+
   function generateID() {
     return `${Math.trunc(Math.random() * 999)}-${Math.trunc(
       Math.random() * 999
@@ -12,7 +13,7 @@ const Receiver = () => {
 
   const onConnection = () => {
     if (sender_uid.length === 0) {
-      window.alert("Please enter sender id");  
+      window.alert("Please enter sender id");
       return;
     }
     let joinID = generateID();
@@ -20,10 +21,8 @@ const Receiver = () => {
       sender_uid: sender_uid,
       uid: joinID,
     });
-    document.querySelector(".join-screen").classList.remove("active");
-    document.querySelector(".fs-screen").classList.add("active");
     window.alert("You are connected to sender");
-    setshowId(true);
+    setshow(true);
     let fileShare = {};
 
     socket.on("fs-meta", function (metadata) {
@@ -65,31 +64,35 @@ const Receiver = () => {
   };
 
   return (
-    <div className="app">
-      <div className="screen join-screen active">
-        <div className="form">
-          <h2>Share your files securely</h2>
-          <div className="form-input">
-            <label>Join ID</label>
-            <input
-              type="text"
-              id="join-id"
-              onChange={(e) => setsenderId(e.target.value)}
-            />
+    <>
+      <div className="app">
+        <div className={`screen join-screen ${!show && "active"}`}>
+          <div className="form">
+            <h2>Share your files securely</h2>
+            <div className="form-input">
+              <label>Join ID</label>
+              <input
+                type="text"
+                id="join-id"
+                onChange={(e) => setsenderId(e.target.value)}
+              />
+            </div>
+            {!show && (
+              <div className="form-input">
+                <button id="receiver-start-con-btn" onClick={onConnection}>
+                  Connect
+                </button>
+              </div>
+            )}
           </div>
-          {!showId && <div className="form-input">
-            <button id="receiver-start-con-btn" onClick={onConnection}>
-              Connect
-            </button>
-          </div>}
+        </div>
+        <div className={`screen fs-screen ${show && "active"}`}>
+          <div className="files-list">
+            <div className="title">Shared files</div>
+          </div>
         </div>
       </div>
-      <div className="screen fs-screen">
-        <div className="files-list">
-          <div className="title">Shared files</div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
