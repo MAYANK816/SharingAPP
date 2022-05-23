@@ -1,17 +1,14 @@
-h2{
-    padding: 25px;
-}
-
 body {
-	background: #f5f5f5;
+	background: linear-gradient(34deg, rgba(93,176,246,1) 0%, rgba(0,212,255,1) 100%);
 	font-family: "Roboto",sans-serif;
+	height: 100vh;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
 }
 
 
 .app {
-	width: 100vw;
 	height: auto;
-	background: #fff;
 }
 
 
@@ -22,6 +19,8 @@ body {
 	font-size: 40px;
 	margin-bottom: 20px;
 	line-height:45px;
+	color: white;
+	margin-left: 10px;
 	font-family: "Montserrat",sans-serif;
 }
 .join-screen .form button {
@@ -35,7 +34,7 @@ body {
 	border-radius: 20px;
 }
 .join-screen .form #join-id b {
-	color: #222;
+	color: white;
 	display: block;
 	margin-top: 20px;
 }
@@ -43,7 +42,7 @@ body {
 	display: inline-block;
 	font-size: 25px;
 	font-family: monospace;
-	color: #111;
+	color: white;
 	padding: 10px;
 	border: 1px solid #111;
 	margin-top: 5px;
@@ -51,6 +50,7 @@ body {
 .join-screen .form .form-input label {
 	color: #222;
 	font-size: 18px;
+
 }
 .join-screen .form .form-input input {
 	display: block;
@@ -64,6 +64,7 @@ body {
 }
  #roomId{
 	 margin-left: 15px;
+	 color: white;
  }
 .fs-screen {
 	padding: 20px;
@@ -71,13 +72,16 @@ body {
 .fs-screen .file-input {
 	width: 100%;
 	border: 2px dashed #555;
+	height:400px;
+	text-align: center;
 }
 .fs-screen .file-input label {
 	display: block;
 	width: 100%;
+	height: 100%;
 	padding: 40px 50px;
 	text-align: center;
-	color: #111;
+	color: white;
 	font-size: 18px;
 }
 .fs-screen .file-input input {
@@ -112,12 +116,47 @@ body {
 	font-size: 18px;
 	border-top: 1px solid #eee;
 }
-
+.btn_grp{
+	display: flex;
+	align-items: center;
+	
+	justify-content: space-around;
+}
+.btn_grp button{
+	padding: 15px;
+	width: 10vw;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	margin-top: 20px;
+	margin-left: 6px;
+	font-weight: 600;
+	cursor: pointer;
+}
 .Home_animation{
-	margin-top: 50px;
-	display: grid;
-	width: 100vw;
-	place-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Home_animation img{
+	width: 70%;
+	margin-top: 30px;
+}
+.Home_content{
+	display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.btn_grp button :hover{
+	background: transparent;
+	color: white;
+}
+.Home_animation h2{
+		color: white;
+		margin-left: 55px;
+		margin-top: 20%;
+		font-size: 2rem;
 }
 @media screen and (max-wdith:780px) {
 	body{

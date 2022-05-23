@@ -89,9 +89,9 @@ const Sender = () => {
             {showId && <div className="screen fs-screen">
                 <div className="file-input">
                     <label for="file-input">
-                        Click here to Select files for sharing
+                        Click here to Select files for sharing   <input type="file" id="file-input" onChange={setFile} />
                     </label>
-                    <input type="file" id="file-input" onChange={setFile} />
+
                 </div>
                 <div className="files-list">
                     <div className="title">Shared files</div>
