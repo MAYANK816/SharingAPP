@@ -113,6 +113,12 @@ body {
 	border-top: 1px solid #eee;
 }
 
+.Home_animation{
+	margin-top: 50px;
+	display: grid;
+	width: 100vw;
+	place-items: center;
+}
 @media screen and (max-wdith:780px) {
 	body{
 		width: 100vw;
