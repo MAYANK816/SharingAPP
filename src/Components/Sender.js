@@ -3,7 +3,7 @@ import "./Home.css";
 import socket from "./Helper";
 const Sender = () => {
   const [roomId, setroomId] = useState("000-000-000");
-  const [showId, setshowId] = useState(false);
+  const [show, setshow] = useState(false);
   let receiverID;
   const generateRoomId = () => {
     let Id =
@@ -23,7 +23,7 @@ const Sender = () => {
     generateRoomId();
   }, []);
   const createRoom = () => {
-    setshowId(!showId);
+    setshow(!show);
     socket.emit("sender-join", {
       uid: roomId,
     });
@@ -78,8 +78,6 @@ const Sender = () => {
           uid: receiverID,
           buffer: chunk,
         });
-      } else {
-        console.log("Sent file successfully");
       }
     });
   }
@@ -89,12 +87,14 @@ const Sender = () => {
         <div className="screen join-screen active">
           <div className="form">
             <h2>Share your files securely</h2>
-            {!showId && <div className="form-input">
-              <button id="sender-start-con-btn" onClick={createRoom}>
-                Create share room
-              </button>
-            </div>}
-            {showId && (
+            {!show && (
+              <div className="form-input">
+                <button id="sender-start-con-btn" onClick={createRoom}>
+                  Create share room
+                </button>
+              </div>
+            )}
+            {show && (
               <div id="roomId">
                 <b>Room ID</b> <span id="join-id">{roomId}</span>{" "}
               </div>
@@ -103,7 +103,7 @@ const Sender = () => {
           </div>
         </div>
       </div>
-      {showId && (
+      {show && (
         <div className="screen fs-screen">
           <div className="file-input">
             <label for="file-input">
