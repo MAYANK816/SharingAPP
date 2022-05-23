@@ -1,165 +1,163 @@
 body {
-	background: linear-gradient(34deg, rgba(93,176,246,1) 0%, rgba(0,212,255,1) 100%);
-	font-family: "Roboto",sans-serif;
-	height: 100vh;
-	background-repeat: no-repeat;
-	overflow-x: hidden;
+  background: linear-gradient(
+    34deg,
+    rgba(93, 176, 246, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
-
-
+html{
+	height: -webkit-fill-available;
+}
 .app {
-	height: auto;
+  height: auto;
 }
-
 
 .join-screen .form .form-input {
-	margin: 10px 10px;
+  margin: 10px 10px;
 }
 .join-screen .form h2 {
-	font-size: 40px;
-	margin-bottom: 20px;
-	line-height:45px;
-	color: white;
-	margin-left: 10px;
-	font-family: "Montserrat",sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 45px;
+  color: white;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 .join-screen .form button {
-	background: #111;
-	color: #fff;
-	padding: 10px 20px;
-	border: none;
-	outline: none;
-	font-size: 16px;
-	font-weight: 600;
-	border-radius: 20px;
+  background: #111;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
 }
 .join-screen .form #join-id b {
-	color: white;
-	display: block;
-	margin-top: 20px;
+  color: white;
+  display: block;
+  margin-top: 20px;
 }
 #join-id {
-	display: inline-block;
-	font-size: 25px;
-	font-family: monospace;
-	color: white;
-	padding: 10px;
-	border: 1px solid #111;
-	margin-top: 5px;
+  display: inline-block;
+  font-size: 25px;
+  font-family: monospace;
+  padding: 10px;
+  border: 1px solid #111;
+  margin: inherit;
 }
 .join-screen .form .form-input label {
-	color: #222;
-	font-size: 18px;
-
+  color: #222;
+  font-size: 18px;
 }
 .join-screen .form .form-input input {
-	display: block;
-	margin:10px 0px;
-	width: 100%;
-	max-width: 200px;
-	border: 1px solid #111;
-	color: #111;
-	font-size: 20px;
-	padding: 10px;
+  display: block;
+  margin: 10px 0px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #111;
+  color: #111;
+  font-size: 20px;
+  padding: 10px;
 }
- #roomId{
-	 margin-left: 15px;
-	 color: white;
- }
+#roomId {
+  margin-left: 15px;
+  color: white;
+}
 .fs-screen {
-	padding: 20px;
+  padding: 20px;
 }
 .fs-screen .file-input {
-	width: 100%;
-	border: 2px dashed #555;
-	height:400px;
-	text-align: center;
+  width: 100%;
+  border: 2px dashed #555;
+  height: 100px;
+  text-align: center;
 }
 .fs-screen .file-input label {
-	display: block;
-	width: 100%;
-	height: 100%;
-	padding: 40px 50px;
-	text-align: center;
-	color: white;
-	font-size: 18px;
+  display: block;
+  height: 100%;
+  padding: 40px 50px;
+  text-align: center;
+  font-size: 18px;
 }
 .fs-screen .file-input input {
-	display: none;
+  display: none;
 }
 .fs-screen .files-list {
-	margin-top: 20px;
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
-	flex-wrap: wrap;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .fs-screen .files-list .title {
-	width: 100%;
-	margin: 20px 0px;
+  width: 100%;
+  margin: 20px 0px;
 }
 .fs-screen .files-list .item {
-	width: 33%;
-	min-width: 200px;
-	border: 1px solid #eee;
-	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
+  width: 33%;
+  min-width: 200px;
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
 }
 .fs-screen .files-list .item .progress {
-	padding: 30px;
-	text-align: center;
-	font-size: 50px;
-	color: #222;
-	font-family: "Montserrat";
+  padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  color: #222;
+  font-family: "Montserrat";
 }
 .fs-screen .files-list .item .filename {
-	padding: 5px;
-	font-size: 18px;
-	border-top: 1px solid #eee;
+  padding: 5px;
+  font-size: 18px;
+  border-top: 1px solid #eee;
 }
-.btn_grp{
-	display: flex;
-	align-items: center;
-	
-	justify-content: space-around;
+.btn_grp {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
 }
-.btn_grp button{
-	padding: 15px;
-	width: 10vw;
-	outline: none;
-	border-radius: 5px;
-	border: none;
-	margin-top: 20px;
-	margin-left: 6px;
-	font-weight: 600;
-	cursor: pointer;
+.btn_grp button {
+  padding: 15px;
+  width: 10vw;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 6px;
+  font-weight: 600;
+  cursor: pointer;
 }
-.Home_animation{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.Home_animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.Home_animation img{
-	width: 70%;
-	margin-top: 30px;
+.Home_animation img {
+  width: 70%;
+  margin-top: 30px;
 }
-.Home_content{
-	display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+.Home_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.btn_grp button :hover{
-	background: transparent;
-	color: white;
+.btn_grp button :hover {
+  background: transparent;
+  color: white;
 }
-.Home_animation h2{
-		color: white;
-		margin-left: 55px;
-		margin-top: 20%;
-		font-size: 2rem;
+.Home_animation h2 {
+  color: white;
+  margin-left: 55px;
+  margin-top: 20%;
+  font-size: 2rem;
 }
-@media screen and (max-wdith:780px) {
-	body{
-		width: 100vw;
-	}
+@media screen and (max-wdith: 780px) {
+  body {
+    width: 100vw;
+  }
 }
