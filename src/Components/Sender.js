@@ -49,7 +49,7 @@ const Sender = () => {
         {
           filename: file.name,
           total_buffer_size: buffer.length,
-          buffer_size: 1024,
+          buffer_size: 10240,
         },
         buffer,
         el.querySelector(".progress")
@@ -71,7 +71,7 @@ const Sender = () => {
       progress_node.innerText = Math.trunc(
         ((metadata.total_buffer_size - buffer.length) /
           metadata.total_buffer_size) *
-          100
+        100
       );
       if (chunk.length !== 0) {
         socket.emit("file-raw", {
