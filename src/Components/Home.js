@@ -21,7 +21,9 @@ const Home = () => {
             style={{ width: 250, height: 250, marginTop: 20 }}
           />
         </div>
-        <img src="/images/homeIcon.png" alt="banner_img"></img>
+        <div className="home_img">
+          <img src="/images/homeIcon.png" alt="banner_img"></img>
+        </div>
       </div>
     </>
   );
